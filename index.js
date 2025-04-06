@@ -45,6 +45,16 @@ const numbers = [-24, -11, 27, 29, -4, -28, -21, -14, 3, -8, 24, 19, -25, -2, -1
     };
 });
 
+
+//6. Vypište do stránky pouze ta čísla, jejíchž absolutní hodnota je dělitelná třemi.
+//DRUHÁ VARIANTA
+document.body.innerHTML += "<h4> 6. II. Varianta: Výpis čísel s absolutní hodnotou dělitelnou třemi: "
+    numbers.forEach ((cislo)=>{
+    if ((cislo %3) ===0 ){
+        document.body.innerHTML += `${cislo}, `
+    };
+});
+
  //7. Vypište do stránky jak daleko je každé číslo v seznamu od čísla 5.
  document.body.innerHTML += "<h4> 7. Jak daleko je každé číslo v seznamu od čísla 5: "
  numbers.forEach ((cislo) =>{
@@ -56,6 +66,14 @@ document.body.innerHTML += "<h4> 8.Výpis vzdáleností druhé mocniny všech č
 numbers.forEach ((cislo)=>{
     document.body.innerHTML += ` ${Math.abs(5-(cislo * cislo))}, ` 
     });
+
+//8.Vypište do stránky druhé mocnicny vzdáleností všech čísel od čísla 5.
+//DRUHÁ VARIANTA
+document.body.innerHTML += "<h4> 8. II.Varianta. Výpis vzdáleností druhé mocniny všech čísel od čísla 5: "
+numbers.forEach ((cislo)=>{
+    document.body.innerHTML += ` ${Math.abs((cislo -5)* (cislo -5))}, ` 
+    });    
+    
 
     //9. Spočítejte, kolik je v seznamu záporných čísel.
 document.body.innerHTML += "<h4> 9. Počet záporných čísel v seznamu: "
